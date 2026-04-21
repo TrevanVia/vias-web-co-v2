@@ -1,0 +1,137 @@
+:root {
+  --ink: #2a1f14;
+  --ink-soft: #4a3d2f;
+  --ink-faint: #8a7a68;
+  --paper: #f6f2ea;
+  --paper-deep: #ebe4d6;
+  --paper-edge: #dcd3c1;
+  --accent: #a0432a;
+  --accent-soft: #d99a80;
+  --accent-hover: #8a3822;
+  --sage: #8a9b80;
+  --hairline: #d4cab7;
+  --hairline-strong: #a89a83;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Figtree', -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ---------- BUTTONS ---------- */
+.btn-primary, .btn-ghost {
+  font-family: 'Figtree', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 28px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-primary:hover { background: var(--accent); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hairline-strong);
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink);
+  background: var(--paper-deep);
+}
+
+.btn-disabled {
+  background: var(--paper-deep);
+  color: var(--ink-faint);
+  border: 1px solid var(--hairline);
+  cursor: not-allowed;
+  font-family: 'Figtree', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 28px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- SECTION LABELS & HEADS ---------- */
+.section-label {
+  font-family: 'Figtree', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 14px;
+  border-top: 2px solid var(--accent);
+  display: inline-block;
+  align-self: start;
+}
+
+.section-lead {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+.section-head h2 {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: clamp(38px, 5.2vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 28px;
+  max-width: 16ch;
+}
+
+.section-head p {
+  font-size: 18px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  max-width: 540px;
+}
+
+/* ---------- PAGE WRAPPER ---------- */
+.page {
+  padding-top: 80px;
+  min-height: calc(100vh - 200px);
+}
+
+/* ---------- RESPONSIVE COMMON ---------- */
+@media (max-width: 960px) {
+  .section-lead { grid-template-columns: 1fr; gap: 40px; margin-bottom: 60px; }
+}
+
+@media (max-width: 640px) {
+  .section-head h2 { font-size: clamp(36px, 9vw, 56px); }
+}
