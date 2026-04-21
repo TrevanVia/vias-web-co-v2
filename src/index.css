@@ -139,7 +139,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ---------- MOBILE ---------- */
 @media (max-width: 700px) {
   .nav-links { display: none !important; }
-  .mobile-toggle { display: flex !important; }
+  .mobile-toggle { display: flex !important; flex-direction: column !important; visibility: visible !important; }
   .mobile-menu { display: block !important; }
 }
 
@@ -149,4 +149,44 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-footer { grid-template-columns: 1fr !important; gap: 32px !important; padding-top: 32px !important; }
   .hero-sub { max-width: 100% !important; }
   .hero-cta-group { align-self: start !important; }
+}
+
+/* ===== COMPREHENSIVE MOBILE FIXES ===== */
+@media (max-width: 700px) {
+  /* Global: ensure no element overflows */
+  .section-lead { grid-template-columns: 1fr !important; gap: 32px !important; margin-bottom: 48px !important; }
+
+  /* Process section: stack all 3 columns into single column */
+  .process-item-grid { grid-template-columns: 1fr !important; gap: 16px !important; padding: 40px 0 !important; }
+  .process-num-wrap { margin-bottom: 4px !important; }
+  .process-body-wrap { max-width: 100% !important; }
+
+  /* Pricing card: stack 2-col layout, size down $1,997 */
+  .price-card-grid { grid-template-columns: 1fr !important; gap: 24px !important; padding: 40px 0 !important; text-align: left !important; }
+  .price-amount-mobile { font-size: 72px !important; }
+  .price-hosting-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* Pricing "What's included" 2-col to 1-col */
+  .included-grid-mobile { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* About "How I work" 2x2 to 1x4 */
+  .how-grid-mobile { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* Work page cards: stack */
+  .work-grid-mobile { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* Start page: stack form and info vertically, form first */
+  .start-grid-mobile { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .start-form-mobile { padding: 28px 24px !important; }
+  .start-left-mobile h1 { font-size: 40px !important; }
+
+  /* Sections: tighter padding */
+  section[class*="Section"], .section { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* Universal grid guard: any 2-col grid becomes single col */
+  [style*="gridTemplateColumns: 'repeat(2, 1fr)'"] { grid-template-columns: 1fr !important; }
+
+  /* Credentials strip already has a rule above, reinforce */
+  .creds-inner { flex-direction: column !important; gap: 8px !important; font-size: 11px !important; padding: 8px 0 !important; }
+  .creds-inner .mark { display: none !important; }
 }

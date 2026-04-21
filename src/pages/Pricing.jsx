@@ -27,7 +27,7 @@ export default function Pricing() {
       {/* PRICE CARD */}
       <section style={styles.priceSection}>
         <div style={styles.priceInner}>
-          <div style={styles.priceCard}>
+          <div className="price-card-grid" style={styles.priceCard}>
             <div>
               <div style={styles.priceName}>The Standard</div>
               <div style={styles.priceSub}>Five-page local business site</div>
@@ -39,7 +39,7 @@ export default function Pricing() {
             </div>
           </div>
 
-          <div style={styles.priceHosting}>
+          <div className="price-hosting-grid" style={styles.priceHosting}>
             <div style={styles.priceHostingLeft}>
               <strong style={{ color: 'var(--paper)', fontWeight: 600 }}>Plus $97/month</strong> for hosting, security, unlimited content updates, and a direct line to me when you need something changed. Cancel any time.
             </div>
@@ -56,7 +56,7 @@ export default function Pricing() {
       <section style={styles.includedSection}>
         <div style={styles.includedInner}>
           <span className="section-label">What's included</span>
-          <div style={styles.includedGrid}>
+          <div className="included-grid-mobile" style={styles.includedGrid}>
             {[
               ['Five custom pages', 'Home, about, services, contact, plus one more. Designed from scratch for your business.'],
               ['Written copy', 'I write the words myself, based on how you actually talk about your business.'],

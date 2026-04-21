@@ -47,8 +47,8 @@ export default function Start() {
       <SEO title="Start a project" description="Tell me about your business. I'll read it today and get back to you within a few hours." path="/start" />
 
       <section style={styles.section}>
-        <div style={styles.inner}>
-          <div style={styles.left}>
+        <div className="start-grid-mobile" style={styles.inner}>
+          <div className="start-left-mobile" style={styles.left}>
             <span className="section-label" style={{ marginBottom: 32, display: 'inline-block' }}>Start a project</span>
             <h1 style={styles.h1}>Tell me about your business.</h1>
             <p style={styles.lead}>
@@ -79,7 +79,7 @@ export default function Start() {
                 </p>
               </div>
             ) : (
-              <form style={styles.form} onSubmit={onSubmit}>
+              <form className="start-form-mobile" style={styles.form} onSubmit={onSubmit}>
                 <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
 
                 <div style={styles.field}>

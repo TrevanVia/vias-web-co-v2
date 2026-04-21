@@ -26,7 +26,7 @@ export default function About() {
 
         <div style={styles.howWrap}>
           <div style={styles.howLabel}>How I work</div>
-          <div style={styles.howGrid}>
+          <div className="how-grid-mobile" style={styles.howGrid}>
             {[
               ['Flat pricing, always.', "You see the price before we start. I don't do hourly billing, line-item quotes, or surprise invoices. One number, one deliverable."],
               ['Fourteen days, every time.', "Every project has the same timeline. No six-month agency slogs. Fast doesn't mean rushed. It means I respect your time."],

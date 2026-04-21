@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* CREDENTIALS STRIP */}
       <div style={styles.credsStrip}>
-        <div style={styles.credsInner}>
+        <div className="creds-inner" style={styles.credsInner}>
           <span>Based in Floyd, VA</span>
           <span style={styles.mark}>◆</span>
           <span>Serving the NRV</span>
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={styles.workGrid}>
+        <div className="work-grid-mobile" style={styles.workGrid}>
           <SiteCard
             tag="Real estate · 2026"
             title="Trevan Via Realty"
