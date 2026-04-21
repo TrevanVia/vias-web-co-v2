@@ -16,7 +16,7 @@ export default function Home() {
       <SEO path="/" />
 
       {/* HERO */}
-      <section style={styles.hero}>
+      <section className="hero-section" style={styles.hero}>
         <div style={styles.heroMeta}>
           <span style={styles.heroDot}></span>
           <span>Accepting projects · Summer 2026</span>
@@ -26,11 +26,11 @@ export default function Home() {
           Websites for the New River <span style={styles.accent}>Valley.</span>
         </h1>
 
-        <div style={styles.heroFooter}>
-          <p style={styles.heroSub}>
+        <div className="hero-footer" style={styles.heroFooter}>
+          <p className="hero-sub" style={styles.heroSub}>
             Small, sharp sites for the businesses that make the NRV what it is. Flat pricing, fourteen-day turnarounds, and a local guy who picks up the phone.
           </p>
-          <div style={styles.ctaGroup}>
+          <div className="hero-cta-group" style={styles.ctaGroup}>
             <Link to="/start" className="btn-primary">Start a project →</Link>
             <Link to="/pricing" className="btn-ghost">See pricing</Link>
           </div>
