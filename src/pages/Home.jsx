@@ -38,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* CREDENTIALS STRIP */}
-      <div style={styles.credsStrip}>
+      <div className="creds-strip" style={styles.credsStrip}>
         <div className="creds-inner" style={styles.credsInner}>
           <span>Based in Floyd, VA</span>
           <span style={styles.mark}>◆</span>
