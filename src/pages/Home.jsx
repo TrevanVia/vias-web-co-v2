@@ -63,7 +63,7 @@ export default function Home() {
 
           <div style={styles.processList}>
             {processSteps.map(step => (
-              <div key={step.num} style={styles.processItem}>
+              <div key={step.num} className="process-item-mobile" style={styles.processItem}>
                 <div>
                   <div style={styles.processNum}>{step.num}</div>
                   <div style={styles.processWhen}>{step.when}</div>
